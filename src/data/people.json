@@ -1,0 +1,20 @@
+{
+  "advisor": {
+    "name": "Varun Shankar",
+    "title": "Professor (tenured)",
+    "image": "/people/varun.png"
+  },
+  "postdoctoral_associates": [
+    { "name": "Jane Doe", "title": "Postdoctoral Researcher", "image": "/people/jane.jpg" }
+  ],
+  "graduate_students": [
+    { "name": "Milena Belianovich", "title": "MS Student", "image": "/people/milena.jpg" },
+    { "name": "Alberto Cattaneo", "title": "PhD Student", "image": "/people/alberto.jpg" },
+    { "name": "Ramansh Sharma", "title": "PhD Student", "image": "/people/ramansh.jpg" },
+    { "name": "Matthew Flatt", "title": "PhD Student", "image": "/people/matthew.jpg" },
+    { "name": "Branden Frieden", "title": "PhD Student", "image": "/people/branden.jpg" },
+    { "name": "Andrey Pluzhnik", "title": "PhD Student", "image": "/people/andrey.jpg" }
+  ],
+  "undergraduate_students": [],
+  "alumni": []
+}

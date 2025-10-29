@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Operator Learning on Manifolds",
+    "summary": "DeepONets for PDEs on spheres and tori; training on FEM/manufactured data with surface differential operators.",
+    "link": "#"
+  },
+  {
+    "title": "Taylor-Enhanced DeepONets",
+    "summary": "Incorporate higher-order Taylor terms and physics residuals into the objective for improved stability and generalization.",
+    "link": "#"
+  },
+  {
+    "title": "Predictor–Corrector DeepONets",
+    "summary": "A cascaded architecture where a predictor trained on FEM solutions feeds a corrector trained on manufactured solutions.",
+    "link": "#"
+  }
+]
