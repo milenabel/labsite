@@ -1,0 +1,21 @@
+[
+
+  {
+    "src": "/gallery/hike.jpg",
+    "alt": "Group photo on a hike",
+    "who": ["Milena Belianovich","Varun Shankar","Matthew Lowery","Ramansh Sharma","Alberto Cattaneo"],
+    "event": "Hike at Park City",
+    "location": "Park City, UT",
+    "date": "2024-09-01",
+    "description": "Hiking on a weekend together."
+  },
+  {
+    "src": "/gallery/boxing.png",
+    "alt": "Group photo at a boxing class",
+    "who": ["Alberto Cattaneo", "Matthew Lowery","Ramansh Sharma","Brenden Frieden", "Varun Shankar","Milena Belianovich"],
+    "event": "Boxing lab activity",
+    "location": "Bountiful, UT",
+    "date": "2025-02-08",
+    "description": "Enjoying some physical excercise together!"
+  }
+]

@@ -2,19 +2,55 @@
   "advisor": {
     "name": "Varun Shankar",
     "title": "Professor (tenured)",
-    "image": "/people/varun.png"
+    "image": "/people/varun.png",
+    "bio": "I am currently an Assistant Professor (tenure-track) in the Kahlert School of Computing at the University of Utah. I develop scientific machine learning (SciML) architectures, with a focus on scalability, provable correctness, and robustness. My long-term goal is to create digital twins for personalized medicine and building automation.\n\nI obtained my PhD in Scientific Computing from the School of Computing at the University of Utah in 2014. I followed that up with a 4-year postdoctoral position in the Department of Mathematics at the University of Utah. I then spent 5 years as a (non tenure-track) lecturer within the School of Computing. My other research interests include statistical data fitting, meshless scientific computing, and high-performance computing.",
+    "links": {
+      "scholar": "https://scholar.google.com/citations?user=goYJXTsAAAAJ&hl=en",
+      "linkedin": "https://www.linkedin.com/in/varun-shankar-4b86b19/",
+      "website": "https://users.cs.utah.edu/~shankar/index.html"
+    }
   },
-  "postdoctoral_associates": [
-    { "name": "Jane Doe", "title": "Postdoctoral Researcher", "image": "/people/jane.jpg" }
-  ],
+
+  "postdoctoral_associates": [],
+
   "graduate_students": [
-    { "name": "Milena Belianovich", "title": "MS Student", "image": "/people/milena.jpg" },
-    { "name": "Alberto Cattaneo", "title": "PhD Student", "image": "/people/alberto.jpg" },
-    { "name": "Ramansh Sharma", "title": "PhD Student", "image": "/people/ramansh.jpg" },
-    { "name": "Matthew Flatt", "title": "PhD Student", "image": "/people/matthew.jpg" },
-    { "name": "Branden Frieden", "title": "PhD Student", "image": "/people/branden.jpg" },
-    { "name": "Andrey Pluzhnik", "title": "PhD Student", "image": "/people/andrey.jpg" }
+    {
+      "name": "Milena Belianovich",
+      "title": "MS Student",
+      "image": "/people/milena.jpg",
+      "research": "Operator learning, Poisson PDEs, Kernels."
+    },
+    {
+      "name": "Alberto Cattaneo",
+      "title": "PhD Student",
+      "image": "/people/alberto.jpg",
+      "research": "SciML for physical systems, meshless methods, stability and generalization of operator networks."
+    },
+    {
+      "name": "Ramansh Sharma",
+      "title": "PhD Student",
+      "image": "/people/ramansh.png",
+      "research": "Operator Learning, Numerical linear algebra and statistical fitting for large-scale scientific data."
+    },
+    {
+      "name": "Matthew Lowery",
+      "title": "PhD Student",
+      "image": "/people/matthew.jpg",
+      "research": "High-performance computing and systems for scientific machine learning."
+    },
+    {
+      "name": "Branden Frieden",
+      "image": "/people/no.jpg",
+      "title": "PhD Student",
+      "research": "Robotics, Physics-informed neural networks and PDE-constrained learning."
+    },
+    {
+      "name": "Andrey Pluzhnik",
+      "image": "/people/no.jpg",
+      "title": "PhD Student"
+    }
   ],
+
   "undergraduate_students": [],
   "alumni": []
 }

@@ -25,3 +25,54 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Brand colors: Maroon Theme */
+@theme inline {
+  --color-brand-50:  #fff1f2;
+  --color-brand-100: #ffe4e6;
+  --color-brand-200: #fecdd3;
+  --color-brand-300: #fda4af;
+  --color-brand-400: #fb7185;
+  --color-brand-500: #b91c1c; /* deep red */
+  --color-brand-600: #9f1418; /* maroon */
+  --color-brand-700: #7f1014; /* darker maroon */
+  --color-brand-800: #661015;
+  --color-brand-900: #4a0d11;
+
+  --color-muted-border: #e5e7eb; /* gray-200 */
+}
+
+/* Link behavior */
+a { text-underline-offset: 3px; }
+a:hover { color: var(--color-brand-600); }
+
+/* Section spacing helper */
+.section { @apply py-10 md:py-14; }
+
+.section-title { @apply text-xl font-semibold text-brand-700 mb-3; }
+
+/* Card utility */
+.card { @apply rounded-2xl border bg-white shadow; border-color: var(--color-muted-border); }
+
+/* no borders card */
+.card-nb { @apply rounded-2xl bg-white p-6; }
+
+/* maroon card */
+.card-brand { @apply rounded-2xl border border-brand-200 bg-white shadow-sm; }
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition;
+}
+.btn-primary { @apply bg-brand-700 text-white hover:bg-brand-600; }
+.btn-outline { @apply border text-brand-700 hover:bg-brand-50; }
+
+/* Hero overlay tint */
+.banner-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(127,16,20,0.55) 0%,
+    rgba(0,0,0,0.35) 45%,
+    rgba(0,0,0,0.55) 100%
+  );
+}

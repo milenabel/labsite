@@ -1,17 +1,17 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import { NavBar } from "@/components/NavBar";
-import { Footer } from "@/components/Footer";
+import type { Metadata } from "next";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Lab Website",
-  description: "Short summary of the lab and its work.",
+  title: "Lab",
+  description: "Research group site",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen flex flex-col">
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col" suppressHydrationWarning>
         <NavBar />
         <main className="flex-1">{children}</main>
         <Footer />

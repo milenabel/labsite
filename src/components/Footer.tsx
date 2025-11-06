@@ -1,20 +1,15 @@
 import Link from "next/link";
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="border-t">
-      <div className="mx-auto max-w-6xl px-4 py-6 text-sm flex justify-between">
-        <div>© 2025 University of Utah</div>
-        <div className="space-x-4">
-          {/* Either use Link… */}
-          <Link href="/privacy" prefetch={false} className="underline" suppressHydrationWarning>
-            <span data-gramm="false" data-gramm_editor="false">Privacy Policy</span>
-          </Link>
-
-          {/* …or plain <a>, still OK with suppression */}
-          {/* <a href="/privacy" className="underline" suppressHydrationWarning data-gramm="false" data-gramm_editor="false">Privacy Policy</a> */}
+      <div className="mx-auto max-w-6xl px-4 py-6 flex items-center justify-between text-sm">
+        <div className="text-brand-700">Made by Milena Belianovich</div>
+        <div>
+          <a href="/privacy" className="text-brand-700 hover:underline">Privacy Policy</a>
         </div>
       </div>
     </footer>
   );
 }
+

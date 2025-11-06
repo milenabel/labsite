@@ -1,36 +1,163 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Operator Learning & Scientific Computing Lab — Website
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-blue?logo=tailwindcss)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.4-blue?logo=typescript)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-First, run the development server:
+
+A **Next.js (App Router)** website for the **Operator Learning & Scientific Computing Lab** at the **University of Utah**.  
+It highlights our **research**, **publications**, **people**, **gallery**, and information on how to **get involved**, all themed in elegant maroon.
+
+---
+
+## Preview
+
+![Website Screenshot](public/website.png)
+
+
+---
+
+## Overview
+
+- **Home / Research / People / Gallery / Get Involved / Publications / Privacy**
+- **People Page**
+    - Advisor section with extended bio + links (Google Scholar, LinkedIn, website)
+    - Student cards with photo, title, and research area
+- **Publications Page**
+    - Auto-fetches papers from **arXiv** using student/alumni names
+    - Renders inline LaTeX in titles using **KaTeX**
+    - Highlights lab members’ names in bold
+- **Research Page**
+    - Displays projects and funding agencies with logos
+- **Gallery Page**
+    - Grid layout with photo cards (event, who, date, description)
+- **Get Involved**
+    - Email buttons that open the user’s email client or Gmail
+- **Privacy Policy**
+    - Plain-language, academic-style privacy statement
+
+---
+
+## Tech Stack
+
+- **Next.js 16 (App Router)**
+- **TypeScript**
+- **Tailwind CSS** with a custom **maroon theme**
+- **KaTeX** for inline math rendering
+- **xml2js** for parsing arXiv XML feeds
+- **clsx** for class management
+
+---
+
+## Quick Start
+
+Clone and install everything in one command:
 
 ```bash
+# Clone & enter
+git clone https://github.com/milenabel/labsite.git
+cd labsite
+
+# One-time dependency setup (choose one):
+# macOS/Linux:
+./setup.sh
+# Windows PowerShell:
+powershell -ExecutionPolicy Bypass -File .\setup.ps1
+
+# Run dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Then open: http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Node Requirements
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node ≥ **18.17**
+- If switching Node versions, delete the `.next/` folder to avoid cache and hydration issues.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Command         | Description                |
+|-----------------|----------------------------|
+| `npm run dev`   | Start development server   |
+| `npm run build` | Build production bundle    |
+| `npm run start` | Serve production build     |
+| `npm run lint`  | Lint code with ESLint      |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+src/
+├── app/
+│   ├── page.tsx                # Home
+│   ├── research/page.tsx       # Research projects + funding
+│   ├── people/page.tsx         # People profiles (advisor + students)
+│   ├── gallery/page.tsx        # Gallery grid
+│   ├── get-involved/page.tsx   # Contact info
+│   ├── publications/page.tsx   # ArXiv fetch + render
+│   └── privacy/page.tsx        # Privacy policy
+├── components/                 # Header, Footer, Cards, etc.
+├── data/                       # JSON data files (people, gallery, etc.)
+└── lib/                        # ArXiv fetch + utilities
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Data Files
+
+| File | Purpose |
+|------|----------|
+| `src/data/people.json` | Advisor and student info |
+| `src/data/funding.json` | Funding agencies and logos |
+| `src/data/research.json` | Project titles and summaries |
+| `src/data/gallery.json` | Photo data for gallery page |
+
+
+---
+
+## arXiv Fetching Logic
+
+- Implemented in `src/lib/arxiv.ts`.
+- Fetches XML feeds for each student/alumnus using **xml2js**.
+- **Filters results:**
+  - Must have exact last-name match  
+  - Author first name == student first name or same initial  
+  - Rejects middle-name-only matches
+- Titles are parsed for `$…$` inline math, rendered with **KaTeX**.
+- Student and advisor names are bolded.
+
+---
+
+## Themes & Styles
+
+- Defined in `tailwind.config.ts`
+- Cards, sections, and links styled via reusable classes:
+  - `.card` — padded, rounded panels with border  
+  - `.section-title` — bold maroon headings  
+  - `.link` — underlined maroon text  
+
+---
+
+## Troubleshooting
+
+| Issue | Fix |
+|-------|-----|
+| Hydration mismatch warnings | Disable browser extensions that alter HTML (Grammarly, ad blockers) |
+| Images not loading | Check `/public` path and file names |
+| Module not found: xml2js/katex/clsx | Run `./setup.sh` or `setup.ps1` again |
+| Broken KaTeX titles | Ensure `$…$` pairs are balanced in arXiv titles |
+
+---
+
+## Privacy & Credits
+
+This site follows the lab’s [Privacy Policy](/privacy).
+
+© 2025 **Operator Learning & Scientific Computing Lab**, University of Utah.  
+Site built by **Milena Belianovich**.

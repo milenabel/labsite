@@ -5,9 +5,9 @@ import katex from "katex";
 
 export const revalidate = 3600;
 
-/* LaTeX in titles */
+/* ---------- LaTeX in titles ---------- */
 
-// Minimal HTML escape for non-math text chunks
+// Minimal HTML escape for non-math chunks
 function escapeHtml(s: string) {
   return s
     .replaceAll("&", "&amp;")
@@ -17,21 +17,15 @@ function escapeHtml(s: string) {
     .replaceAll("'", "&#39;");
 }
 
-/**
- * Render a plain text string with inline math delimited by $...$
- * We split by '$' into segments: even indexes = text, odd indexes = math.
- */
+/** Render plain text with inline $...$ math via KaTeX */
 function renderTitleWithLatexToHtml(title: string): string {
   const parts = title.split("$");
   let html = "";
-
   for (let i = 0; i < parts.length; i++) {
     const seg = parts[i];
     if (i % 2 === 0) {
-      // outside math -> escape
       html += escapeHtml(seg);
     } else {
-      // inside math -> render with KaTeX
       try {
         html += katex.renderToString(seg, {
           throwOnError: false,
@@ -47,7 +41,7 @@ function renderTitleWithLatexToHtml(title: string): string {
   return html;
 }
 
-/* Name helpers */
+/* ---------- Name helpers ---------- */
 
 function norm(s: string) {
   return s.normalize("NFKC").trim().replace(/\s+/g, " ").toLowerCase();
@@ -66,22 +60,18 @@ function splitName(s: string) {
  * - last names identical
  * - NO middle tokens on the author side (students have no middles)
  * - author first == student first OR author's first is a single-letter initial matching student's first initial
- * - otherwise reject
  */
 function matchesStudentStrict(authorName: string, studentName: string) {
   const a = splitName(authorName);
   const s = splitName(studentName);
-
   if (!a.last || !s.last || a.last !== s.last) return false;
   if (a.middles.length > 0) return false;
-
   if (a.first === s.first) return true;
   if (a.first.length === 1 && s.first.length > 0 && a.first[0] === s.first[0]) return true;
-
   return false;
 }
 
-/** Advisor match: last = last, and first == first OR first-initial matches; allow middles */
+/** Advisor match (looser): last equal, first equal or first initial equal; middles allowed */
 function matchesAdvisorLoose(authorName: string, advisorName: string) {
   const a = splitName(authorName);
   const d = splitName(advisorName);
@@ -91,7 +81,7 @@ function matchesAdvisorLoose(authorName: string, advisorName: string) {
   return false;
 }
 
-/* People helpers */
+/* ---------- People helpers ---------- */
 
 function authorNamesFromPeople(data: any) {
   const students = [
@@ -105,7 +95,7 @@ function authorNamesFromPeople(data: any) {
   return { students, advisor };
 }
 
-/* Rendering */
+/* ---------- Render helpers ---------- */
 
 function renderAuthorsLine(
   authors: string[],
@@ -153,7 +143,7 @@ function renderAuthorsLine(
   );
 }
 
-/* Page */
+/* ---------- Page ---------- */
 
 export default async function PublicationsPage() {
   const { students, advisor } = authorNamesFromPeople(people as any);
@@ -163,6 +153,7 @@ export default async function PublicationsPage() {
     p.authors.some((a) => students.some((s) => matchesStudentStrict(a, s)))
   );
 
+  // newest first within year
   items.sort((a, b) => (b.published ?? "").localeCompare(a.published ?? ""));
   const byYear = groupByYear(items);
 
@@ -180,12 +171,12 @@ export default async function PublicationsPage() {
           .sort((a, b) => +b - +a)
           .map((year) => (
             <section key={year} className="mb-10">
-              <h2 className="text-xl font-semibold">{year}</h2>
+              <h2 className="text-xl font-semibold text-brand-700">{year}</h2>
               <ul className="mt-4 space-y-4">
                 {byYear[year].map((p: ArxivItem) => {
                   const titleHtml = renderTitleWithLatexToHtml(p.title);
                   return (
-                    <li key={p.id} className="rounded-xl border border-gray-200 p-4">
+                    <li key={p.id} className="card p-4">
                       {/* Bold title with KaTeX-rendered inline math */}
                       <div
                         className="font-semibold text-[1.02rem] leading-snug"
@@ -196,15 +187,16 @@ export default async function PublicationsPage() {
 
                       <div className="text-sm mt-2">
                         {p.isPublished ? (
-                          <span className="inline-block rounded-full px-2 py-0.5 text-xs bg-emerald-100 text-emerald-700">
+                          <span className="inline-flex items-center rounded-full bg-brand-50 text-brand-700 px-2 py-0.5 text-xs">
                             Published — {p.venue}
                           </span>
                         ) : (
-                          <span className="inline-block rounded-full px-2 py-0.5 text-xs bg-gray-100 text-gray-700">
+                          <span className="inline-flex items-center rounded-full bg-gray-100 text-gray-700 px-2 py-0.5 text-xs">
                             Preprint — arXiv
                           </span>
                         )}
                       </div>
+
                       <div className="text-sm mt-2 space-x-3">
                         <a className="underline" href={p.linkAbs} target="_blank" rel="noopener noreferrer">
                           arXiv

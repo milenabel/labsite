@@ -21,7 +21,7 @@ export default function ResearchPage() {
       <div className="mx-auto max-w-6xl px-4 py-10 space-y-12">
         {/* Funding */}
         <section className="text-center">
-          <h2 className="text-xl font-semibold">Funding</h2>
+          <h2 className="text-xl font-semibold text-brand-700">Funding</h2>
           <p className="mt-2 text-gray-700">
             We are grateful for receiving support from the following organizations:
           </p>
@@ -41,7 +41,7 @@ export default function ResearchPage() {
                   <img
                     src={f.logo}
                     alt={f.name}
-                    className="h-16 w-auto object-contain"
+                    className="h-16 w-auto object-contain opacity-90 transition hover:opacity-100 hover:scale-[1.02]"
                     title={f.name}
                   />
                 ) : (
@@ -54,17 +54,17 @@ export default function ResearchPage() {
 
         {/* Current Projects */}
         <section>
-          <h2 className="text-xl font-semibold mb-4 text-center">Current Projects</h2>
+          <h2 className="text-xl font-semibold text-brand-700 text-center">Current Projects</h2>
           <div className="mt-4 grid gap-6 sm:grid-cols-2">
             {items.map((p, i) => (
               <article
                 key={i}
-                className="rounded-xl border border-gray-200 p-5 hover:shadow-sm transition-shadow"
+                className="card-brand p-5 hover:border-brand-300 transition-shadow"
               >
                 <h3 className="font-semibold">{p.title}</h3>
                 {p.summary && <p className="mt-2 text-sm text-gray-700">{p.summary}</p>}
                 {p.link && p.link !== "#" && (
-                  <a href={p.link} className="mt-3 inline-block text-sm underline">
+                  <a href={p.link} className="mt-3 inline-block text-sm underline text-brand-700">
                     Learn more
                   </a>
                 )}
