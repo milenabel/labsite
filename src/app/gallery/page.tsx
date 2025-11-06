@@ -22,7 +22,7 @@ export default function GalleryPage() {
       <HeaderBanner
         title="Gallery"
         subtitle="Beyond pushing modern science forward, we also know how to have fun!"
-        imgSrc="/hero/gallery.png"      
+        imgSrc="/hero/activity.png"      
         variant="background"
       />
 

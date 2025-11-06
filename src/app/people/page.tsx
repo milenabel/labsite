@@ -80,7 +80,7 @@ export default function PeoplePage() {
       <HeaderBanner
         title="People"
         subtitle="Learn more about who we are."
-        imgSrc="/hero/people.jpg"
+        imgSrc="/hero/peoples.png"
         variant="background"
       />
 

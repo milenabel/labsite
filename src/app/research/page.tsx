@@ -14,7 +14,7 @@ export default function ResearchPage() {
       <HeaderBanner
         title="Research"
         subtitle="Our lab has many projects we are working on. Take a look!"
-        imgSrc="/hero/research.jpg"
+        imgSrc="/hero/research1.png"
         variant="background"
       />
 

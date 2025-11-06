@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
       <HeaderBanner
         title="Privacy Policy"
         subtitle="How we collect, use, and protect information on this site."
-        imgSrc="/hero/research.jpg"
+        imgSrc="/hero/privacy.png"
         variant="background"
       />
 

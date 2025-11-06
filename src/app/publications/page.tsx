@@ -1,13 +1,57 @@
 import HeaderBanner from "@/components/HeaderBanner";
-import people from "@/data/people.json";
-import { fetchArxivForAuthors, groupByYear, type ArxivItem } from "@/lib/arxiv";
+import snapshot from "@/data/publications.json"; // ← generated file
 import katex from "katex";
 
-export const revalidate = 3600;
+// Types that match the generator output
+type Snapshot = {
+  generatedAt: string;
+  advisor?: string;
+  students: string[];
+  items: ArxivItem[];
+};
 
-/* ---------- LaTeX in titles ---------- */
+export type ArxivItem = {
+  id: string;
+  title: string;
+  authors: string[];
+  linkAbs?: string;
+  linkPdf?: string;
+  doi?: string;
+  published?: string;
+  isPublished?: boolean;
+  venue?: string;
+};
 
-// Minimal HTML escape for non-math chunks
+// ----- same matching/render helpers you already used -----
+function norm(s: string) {
+  return s.normalize("NFKC").trim().replace(/\s+/g, " ").toLowerCase();
+}
+function splitName(s: string) {
+  const parts = norm(s).split(" ").filter(Boolean);
+  const first = (parts[0] || "").replace(/\./g, "");
+  const last = parts[parts.length - 1] || "";
+  const middles = parts.slice(1, -1).map((p) => p.replace(/\./g, ""));
+  return { first, last, parts, middles };
+}
+function matchesStudentStrict(authorName: string, studentName: string) {
+  const a = splitName(authorName);
+  const s = splitName(studentName);
+  if (!a.last || !s.last || a.last !== s.last) return false;
+  if (a.middles.length > 0) return false;
+  if (a.first === s.first) return true;
+  if (a.first.length === 1 && s.first.length > 0 && a.first[0] === s.first[0]) return true;
+  return false;
+}
+function matchesAdvisorLoose(authorName: string, advisorName?: string) {
+  if (!advisorName) return false;
+  const a = splitName(authorName);
+  const d = splitName(advisorName);
+  if (!a.last || !d.last || a.last !== d.last) return false;
+  if (a.first === d.first) return true;
+  if (a.first.length === 1 && d.first.length > 0 && a.first[0] === d.first[0]) return true;
+  return false;
+}
+
 function escapeHtml(s: string) {
   return s
     .replaceAll("&", "&amp;")
@@ -16,8 +60,6 @@ function escapeHtml(s: string) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
 }
-
-/** Render plain text with inline $...$ math via KaTeX */
 function renderTitleWithLatexToHtml(title: string): string {
   const parts = title.split("$");
   let html = "";
@@ -41,61 +83,14 @@ function renderTitleWithLatexToHtml(title: string): string {
   return html;
 }
 
-/* ---------- Name helpers ---------- */
-
-function norm(s: string) {
-  return s.normalize("NFKC").trim().replace(/\s+/g, " ").toLowerCase();
+function groupByYear(items: ArxivItem[]) {
+  const out: Record<string, ArxivItem[]> = {};
+  for (const it of items) {
+    const y = (it.published || "").slice(0, 4) || "Unknown";
+    (out[y] ||= []).push(it);
+  }
+  return out;
 }
-
-function splitName(s: string) {
-  const parts = norm(s).split(" ").filter(Boolean);
-  const first = (parts[0] || "").replace(/\./g, "");
-  const last = parts[parts.length - 1] || "";
-  const middles = parts.slice(1, -1).map((p) => p.replace(/\./g, ""));
-  return { first, last, parts, middles };
-}
-
-/**
- * Strict student match:
- * - last names identical
- * - NO middle tokens on the author side (students have no middles)
- * - author first == student first OR author's first is a single-letter initial matching student's first initial
- */
-function matchesStudentStrict(authorName: string, studentName: string) {
-  const a = splitName(authorName);
-  const s = splitName(studentName);
-  if (!a.last || !s.last || a.last !== s.last) return false;
-  if (a.middles.length > 0) return false;
-  if (a.first === s.first) return true;
-  if (a.first.length === 1 && s.first.length > 0 && a.first[0] === s.first[0]) return true;
-  return false;
-}
-
-/** Advisor match (looser): last equal, first equal or first initial equal; middles allowed */
-function matchesAdvisorLoose(authorName: string, advisorName: string) {
-  const a = splitName(authorName);
-  const d = splitName(advisorName);
-  if (!a.last || !d.last || a.last !== d.last) return false;
-  if (a.first === d.first) return true;
-  if (a.first.length === 1 && d.first.length > 0 && a.first[0] === d.first[0]) return true;
-  return false;
-}
-
-/* ---------- People helpers ---------- */
-
-function authorNamesFromPeople(data: any) {
-  const students = [
-    ...(data.postdoctoral_associates ?? []).map((p: any) => p.name),
-    ...(data.graduate_students ?? []).map((p: any) => p.name),
-    ...(data.undergraduate_students ?? []).map((p: any) => p.name),
-    ...(data.alumni ?? []).map((p: any) => p.name),
-  ].filter(Boolean);
-
-  const advisor = data.advisor?.name as string | undefined;
-  return { students, advisor };
-}
-
-/* ---------- Render helpers ---------- */
 
 function renderAuthorsLine(
   authors: string[],
@@ -103,16 +98,14 @@ function renderAuthorsLine(
   advisor?: string,
   maxShown = 13
 ) {
-  const isAdvisor = (name: string) => (advisor ? matchesAdvisorLoose(name, advisor) : false);
+  const isAdvisor = (name: string) => matchesAdvisorLoose(name, advisor);
   const isStudent = (name: string) => students.some((s) => matchesStudentStrict(name, s));
   const shouldBold = (name: string) => isAdvisor(name) || isStudent(name);
 
   const shown = authors.slice(0, maxShown);
-
   const studentsOnThisPaper = students.filter((s) =>
     authors.some((a) => matchesStudentStrict(a, s))
   );
-
   const missingStudents = studentsOnThisPaper.filter(
     (s) => !shown.some((a) => matchesStudentStrict(a, s))
   );
@@ -143,18 +136,14 @@ function renderAuthorsLine(
   );
 }
 
-/* ---------- Page ---------- */
+// ---- PAGE (purely static: reads JSON) ----
+export const dynamic = "force-static"; // ensure SSG
+export default function PublicationsPage() {
+  const snap = snapshot as Snapshot;
+  const { students, advisor } = snap;
+  const items = snap.items ?? [];
 
-export default async function PublicationsPage() {
-  const { students, advisor } = authorNamesFromPeople(people as any);
-
-  const fetched = await fetchArxivForAuthors(students, 150);
-  const items = fetched.filter((p) =>
-    p.authors.some((a) => students.some((s) => matchesStudentStrict(a, s)))
-  );
-
-  // newest first within year
-  items.sort((a, b) => (b.published ?? "").localeCompare(a.published ?? ""));
+  // newest first per year
   const byYear = groupByYear(items);
 
   return (
@@ -162,7 +151,7 @@ export default async function PublicationsPage() {
       <HeaderBanner
         title="Publications"
         subtitle="Recent preprints and publications by our students and alumni"
-        imgSrc="/hero/publications.jpg"
+        imgSrc="/hero/publication.png"
         variant="background"
       />
 
@@ -171,47 +160,72 @@ export default async function PublicationsPage() {
           .sort((a, b) => +b - +a)
           .map((year) => (
             <section key={year} className="mb-10">
-              <h2 className="text-xl font-semibold text-brand-700">{year}</h2>
+              <h2 className="section-title">{year}</h2>
               <ul className="mt-4 space-y-4">
-                {byYear[year].map((p: ArxivItem) => {
+                {byYear[year].map((p) => {
                   const titleHtml = renderTitleWithLatexToHtml(p.title);
                   return (
                     <li key={p.id} className="card p-4">
-                      {/* Bold title with KaTeX-rendered inline math */}
                       <div
                         className="font-semibold text-[1.02rem] leading-snug"
                         dangerouslySetInnerHTML={{ __html: `<strong>${titleHtml}</strong>` }}
                       />
-
                       {renderAuthorsLine(p.authors, students, advisor, 13)}
-
                       <div className="text-sm mt-2">
                         {p.isPublished ? (
-                          <span className="inline-flex items-center rounded-full bg-brand-50 text-brand-700 px-2 py-0.5 text-xs">
+                          <span className="inline-block rounded-full px-2 py-0.5 text-xs bg-emerald-100 text-emerald-700">
                             Published — {p.venue}
                           </span>
                         ) : (
-                          <span className="inline-flex items-center rounded-full bg-gray-100 text-gray-700 px-2 py-0.5 text-xs">
+                          <span className="inline-block rounded-full px-2 py-0.5 text-xs bg-gray-100 text-gray-700">
                             Preprint — arXiv
                           </span>
                         )}
                       </div>
+                      <div className="text-sm mt-2 space-x-3" suppressHydrationWarning>
+                        {p.linkAbs && (
+                          <a
+                            className="link"
+                            href={p.linkAbs}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            suppressHydrationWarning
+                            contentEditable={false}
+                            data-gramm="false"
+                            data-gramm_editor="false"
+                            style={{ cursor: "pointer" }}
+                          >
+                            arXiv
+                          </a>
+                        )}
 
-                      <div className="text-sm mt-2 space-x-3">
-                        <a className="underline" href={p.linkAbs} target="_blank" rel="noopener noreferrer">
-                          arXiv
-                        </a>
                         {p.linkPdf && (
-                          <a className="underline" href={p.linkPdf} target="_blank" rel="noopener noreferrer">
+                          <a
+                            className="link"
+                            href={p.linkPdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            suppressHydrationWarning
+                            contentEditable={false}
+                            data-gramm="false"
+                            data-gramm_editor="false"
+                            style={{ cursor: "pointer" }}
+                          >
                             PDF
                           </a>
                         )}
+
                         {p.doi && (
                           <a
-                            className="underline"
+                            className="link"
                             href={`https://doi.org/${p.doi}`}
                             target="_blank"
                             rel="noopener noreferrer"
+                            suppressHydrationWarning
+                            contentEditable={false}
+                            data-gramm="false"
+                            data-gramm_editor="false"
+                            style={{ cursor: "pointer" }}
                           >
                             DOI
                           </a>
@@ -225,8 +239,14 @@ export default async function PublicationsPage() {
           ))}
 
         {items.length === 0 && (
-          <div className="text-gray-600">No publications found yet for the listed authors.</div>
+          <div className="text-gray-600">
+            No publications found yet. Run <code>npm run update:pubs</code> to generate a snapshot.
+          </div>
         )}
+
+        <div className="text-xs text-gray-500 mt-8">
+          Snapshot generated at: {new Date(snap.generatedAt || "").toLocaleString() || "n/a"}
+        </div>
       </div>
     </>
   );

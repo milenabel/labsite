@@ -7,7 +7,7 @@ export default function GetInvolvedPage() {
       <HeaderBanner
         title="Get Involved"
         subtitle="Join our research group and work on cutting-edge scientific computing and machine learning."
-        imgSrc="/hero/get-involved.jpg"  
+        imgSrc="/hero/hands.png"  
         variant="background"
       />
 

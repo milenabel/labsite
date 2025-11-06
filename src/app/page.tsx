@@ -7,7 +7,7 @@ export default function HomePage() {
       <HeaderBanner
         title="About Us"
         subtitle="Exploring the frontiers of scientific computing and operator learning."
-        imgSrc="/hero/homep.jpg"      // optional; shows gradient if missing
+        imgSrc="/hero/home.png"      // optional; shows gradient if missing
         variant="background"
       />
       <section className="section">
