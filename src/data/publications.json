@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-11-06T21:00:19.053Z",
+  "generatedAt": "2025-11-07T05:39:03.095Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -10,6 +10,21 @@
     "Andrey Pluzhnik"
   ],
   "items": [
+    {
+      "id": "http://arxiv.org/abs/2511.04473v1",
+      "title": "Ground-Truth Subgraphs for Better Training and Evaluation of Knowledge\n  Graph Augmented LLMs",
+      "authors": [
+        "Alberto Cattaneo",
+        "Carlo Luschi",
+        "Daniel Justus"
+      ],
+      "linkAbs": "http://arxiv.org/abs/2511.04473v1",
+      "linkPdf": "http://arxiv.org/pdf/2511.04473v1",
+      "doi": "",
+      "published": "2025-11-06T15:45:18Z",
+      "isPublished": false,
+      "venue": ""
+    },
     {
       "id": "http://arxiv.org/abs/2510.22068v1",
       "title": "Deep Gaussian Processes for Functional Maps",
