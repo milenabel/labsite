@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-04T05:39:56.219Z",
+  "generatedAt": "2025-12-05T05:39:43.251Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -11,15 +11,15 @@
   ],
   "items": [
     {
-      "id": "http://arxiv.org/abs/2511.04473v1",
+      "id": "http://arxiv.org/abs/2511.04473v2",
       "title": "Ground-Truth Subgraphs for Better Training and Evaluation of Knowledge Graph Augmented LLMs",
       "authors": [
         "Alberto Cattaneo",
         "Carlo Luschi",
         "Daniel Justus"
       ],
-      "linkAbs": "https://arxiv.org/abs/2511.04473v1",
-      "linkPdf": "https://arxiv.org/pdf/2511.04473v1",
+      "linkAbs": "https://arxiv.org/abs/2511.04473v2",
+      "linkPdf": "https://arxiv.org/pdf/2511.04473v2",
       "doi": "",
       "published": "2025-11-06T15:45:18Z",
       "isPublished": false,
