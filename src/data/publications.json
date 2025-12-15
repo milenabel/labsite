@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-12-14T05:39:39.581Z",
+  "generatedAt": "2025-12-15T05:44:34.165Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -10,6 +10,24 @@
     "Andrey Pluzhnik"
   ],
   "items": [
+    {
+      "id": "http://arxiv.org/abs/2512.11168v1",
+      "title": "An Optimal Weighted Least-Squares Method for Operator Learning",
+      "authors": [
+        "John Turnage",
+        "Matthew Lowery",
+        "John Jakeman",
+        "Zachary Morrow",
+        "Akil Narayan",
+        "Varun Shankar"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2512.11168v1",
+      "linkPdf": "https://arxiv.org/pdf/2512.11168v1",
+      "doi": "",
+      "published": "2025-12-11T23:17:51Z",
+      "isPublished": false,
+      "venue": ""
+    },
     {
       "id": "http://arxiv.org/abs/2511.04473v2",
       "title": "Ground-Truth Subgraphs for Better Training and Evaluation of Knowledge Graph Augmented LLMs",
