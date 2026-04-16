@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-15T07:04:29.313Z",
+  "generatedAt": "2026-04-16T07:05:38.582Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -11,7 +11,7 @@
   ],
   "items": [
     {
-      "id": "http://arxiv.org/abs/2602.15472v3",
+      "id": "http://arxiv.org/abs/2602.15472v4",
       "title": "Fluids You Can Trust: Property-Preserving Operator Learning for Incompressible Flows",
       "authors": [
         "Ramansh Sharma",
@@ -19,8 +19,8 @@
         "Houman Owhadi",
         "Varun Shankar"
       ],
-      "linkAbs": "https://arxiv.org/abs/2602.15472v3",
-      "linkPdf": "https://arxiv.org/pdf/2602.15472v3",
+      "linkAbs": "https://arxiv.org/abs/2602.15472v4",
+      "linkPdf": "https://arxiv.org/pdf/2602.15472v4",
       "doi": "",
       "published": "2026-02-17T10:20:46Z",
       "isPublished": false,
