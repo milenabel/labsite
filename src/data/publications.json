@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-16T07:05:38.582Z",
+  "generatedAt": "2026-04-17T07:06:33.655Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -111,7 +111,7 @@
       "venue": ""
     },
     {
-      "id": "http://arxiv.org/abs/2407.00809v2",
+      "id": "http://arxiv.org/abs/2407.00809v3",
       "title": "Kernel Neural Operators (KNOs) for Scalable, Memory-efficient, Geometrically-flexible Operator Learning",
       "authors": [
         "Matthew Lowery",
@@ -122,8 +122,8 @@
         "Shandian Zhe",
         "Varun Shankar"
       ],
-      "linkAbs": "https://arxiv.org/abs/2407.00809v2",
-      "linkPdf": "https://arxiv.org/pdf/2407.00809v2",
+      "linkAbs": "https://arxiv.org/abs/2407.00809v3",
+      "linkPdf": "https://arxiv.org/pdf/2407.00809v3",
       "doi": "",
       "published": "2024-06-30T19:28:12Z",
       "isPublished": false,
