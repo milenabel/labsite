@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-20T07:25:08.524Z",
+  "generatedAt": "2026-04-21T07:11:42.262Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -76,22 +76,6 @@
       "linkPdf": "https://arxiv.org/pdf/2510.22068v2",
       "doi": "",
       "published": "2025-10-24T23:05:48Z",
-      "isPublished": false,
-      "venue": ""
-    },
-    {
-      "id": "http://arxiv.org/abs/2507.12629v3",
-      "title": "A Unified Framework for Efficient Kernel and Polynomial Interpolation",
-      "authors": [
-        "M. Belianovich",
-        "G. E. Fasshauer",
-        "A. Narayan",
-        "V. Shankar"
-      ],
-      "linkAbs": "https://arxiv.org/abs/2507.12629v3",
-      "linkPdf": "https://arxiv.org/pdf/2507.12629v3",
-      "doi": "",
-      "published": "2025-07-16T20:53:30Z",
       "isPublished": false,
       "venue": ""
     },
