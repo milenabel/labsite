@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-22T07:11:16.665Z",
+  "generatedAt": "2026-04-23T07:11:01.414Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -45,6 +45,21 @@
       "venue": ""
     },
     {
+      "id": "http://arxiv.org/abs/2511.04473v2",
+      "title": "Ground-Truth Subgraphs for Better Training and Evaluation of Knowledge Graph Augmented LLMs",
+      "authors": [
+        "Alberto Cattaneo",
+        "Carlo Luschi",
+        "Daniel Justus"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2511.04473v2",
+      "linkPdf": "https://arxiv.org/pdf/2511.04473v2",
+      "doi": "",
+      "published": "2025-11-06T15:45:18Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
       "id": "http://arxiv.org/abs/2510.22068v2",
       "title": "Deep Gaussian Processes for Functional Maps",
       "authors": [
@@ -61,6 +76,22 @@
       "linkPdf": "https://arxiv.org/pdf/2510.22068v2",
       "doi": "",
       "published": "2025-10-24T23:05:48Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/2507.12629v3",
+      "title": "A Unified Framework for Efficient Kernel and Polynomial Interpolation",
+      "authors": [
+        "M. Belianovich",
+        "G. E. Fasshauer",
+        "A. Narayan",
+        "V. Shankar"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2507.12629v3",
+      "linkPdf": "https://arxiv.org/pdf/2507.12629v3",
+      "doi": "",
+      "published": "2025-07-16T20:53:30Z",
       "isPublished": false,
       "venue": ""
     },
@@ -99,6 +130,82 @@
       "venue": ""
     },
     {
+      "id": "http://arxiv.org/abs/2405.11907v5",
+      "title": "Ensemble and Mixture-of-Experts DeepONets For Operator Learning",
+      "authors": [
+        "Ramansh Sharma",
+        "Varun Shankar"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2405.11907v5",
+      "linkPdf": "https://arxiv.org/pdf/2405.11907v5",
+      "doi": "",
+      "published": "2024-05-20T09:42:44Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/2205.09332v6",
+      "title": "Accelerated Training of Physics-Informed Neural Networks (PINNs) using Meshless Discretizations",
+      "authors": [
+        "Ramansh Sharma",
+        "Varun Shankar"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2205.09332v6",
+      "linkPdf": "https://arxiv.org/pdf/2205.09332v6",
+      "doi": "",
+      "published": "2022-05-19T06:07:01Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/2201.07105v1",
+      "title": "Beyond modeling: NLP Pipeline for efficient environmental policy analysis",
+      "authors": [
+        "Jordi Planas",
+        "Daniel Firebanks-Quevedo",
+        "Galina Naydenova",
+        "Ramansh Sharma",
+        "Cristina Taylor",
+        "Kathleen Buckingham",
+        "Rong Fang"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2201.07105v1",
+      "linkPdf": "https://arxiv.org/pdf/2201.07105v1",
+      "doi": "",
+      "published": "2022-01-08T05:33:04Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/2005.05187v3",
+      "title": "On birational transformations of Hilbert schemes of points on K3 surfaces",
+      "authors": [
+        "Pietro Beri",
+        "Alberto Cattaneo"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2005.05187v3",
+      "linkPdf": "https://arxiv.org/pdf/2005.05187v3",
+      "doi": "",
+      "published": "2020-05-11T15:22:33Z",
+      "isPublished": true,
+      "venue": "June 2022 Mathematische Zeitschrift 301(1):1-18"
+    },
+    {
+      "id": "http://arxiv.org/abs/2002.00138v1",
+      "title": "Positive linear maps and eigenvalue estimates for nonnegative matrices",
+      "authors": [
+        "R. Sharma",
+        "M. Pal",
+        "A. Sharma"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2002.00138v1",
+      "linkPdf": "https://arxiv.org/pdf/2002.00138v1",
+      "doi": "",
+      "published": "2020-02-01T04:47:15Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
       "id": "http://arxiv.org/abs/1912.07119v3",
       "title": "Prime order isometries of unimodular lattices and automorphisms of ihs manifolds",
       "authors": [
@@ -109,6 +216,21 @@
       "linkPdf": "https://arxiv.org/pdf/1912.07119v3",
       "doi": "",
       "published": "2019-12-15T21:59:48Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/1905.07568v1",
+      "title": "A note on variance bounds and location of eigenvalues",
+      "authors": [
+        "R. Sharma",
+        "A. Sharma",
+        "R. Saini"
+      ],
+      "linkAbs": "https://arxiv.org/abs/1905.07568v1",
+      "linkPdf": "https://arxiv.org/pdf/1905.07568v1",
+      "doi": "",
+      "published": "2019-05-18T09:54:40Z",
       "isPublished": false,
       "venue": ""
     },
@@ -124,6 +246,21 @@
       "linkPdf": "https://arxiv.org/pdf/1902.05397v1",
       "doi": "",
       "published": "2019-02-14T14:52:41Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/1812.11554v2",
+      "title": "On the Chow ring of certain Lehn-Lehn-Sorger-van Straten eightfolds",
+      "authors": [
+        "Chiara Camere",
+        "Alberto Cattaneo",
+        "Robert Laterveer"
+      ],
+      "linkAbs": "https://arxiv.org/abs/1812.11554v2",
+      "linkPdf": "https://arxiv.org/pdf/1812.11554v2",
+      "doi": "",
+      "published": "2018-12-30T15:21:25Z",
       "isPublished": false,
       "venue": ""
     },
