@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-26T07:07:07.426Z",
+  "generatedAt": "2026-04-27T07:42:49.660Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -10,6 +10,22 @@
     "Andrey Pluzhnik"
   ],
   "items": [
+    {
+      "id": "http://arxiv.org/abs/2604.22087v1",
+      "title": "JetSCI: A Hybrid JAX-PETSc Framework for Scalable Differentiable Simulation",
+      "authors": [
+        "Alberto Cattaneo",
+        "M Keith Ballard",
+        "Robert M. Kirby",
+        "Varun Shankar"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2604.22087v1",
+      "linkPdf": "https://arxiv.org/pdf/2604.22087v1",
+      "doi": "",
+      "published": "2026-04-23T21:40:01Z",
+      "isPublished": false,
+      "venue": ""
+    },
     {
       "id": "http://arxiv.org/abs/2602.15472v4",
       "title": "Fluids You Can Trust: Property-Preserving Operator Learning for Incompressible Flows",
