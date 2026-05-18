@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-17T07:49:46.377Z",
+  "generatedAt": "2026-05-18T08:54:38.502Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -304,22 +304,6 @@
       "linkPdf": "https://arxiv.org/pdf/1801.05682v2",
       "doi": "",
       "published": "2018-01-17T14:38:06Z",
-      "isPublished": false,
-      "venue": ""
-    },
-    {
-      "id": "http://arxiv.org/abs/1702.04665v1",
-      "title": "Means Moments and Newton's Inequalities",
-      "authors": [
-        "R. Sharma",
-        "A. Sharma",
-        "R. Saini",
-        "G. Kapoor"
-      ],
-      "linkAbs": "https://arxiv.org/abs/1702.04665v1",
-      "linkPdf": "https://arxiv.org/pdf/1702.04665v1",
-      "doi": "",
-      "published": "2017-02-15T16:07:34Z",
       "isPublished": false,
       "venue": ""
     },
