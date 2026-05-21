@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T08:37:57.488Z",
+  "generatedAt": "2026-05-21T08:47:11.378Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -9,5 +9,137 @@
     "Branden Frieden",
     "Andrey Pluzhnik"
   ],
-  "items": []
+  "items": [
+    {
+      "id": "http://arxiv.org/abs/2604.22087v1",
+      "title": "JetSCI: A Hybrid JAX-PETSc Framework for Scalable Differentiable Simulation",
+      "authors": [
+        "Alberto Cattaneo",
+        "M Keith Ballard",
+        "Robert M. Kirby",
+        "Varun Shankar"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2604.22087v1",
+      "linkPdf": "https://arxiv.org/pdf/2604.22087v1",
+      "doi": "",
+      "published": "2026-04-23T21:40:01Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/2511.04473v2",
+      "title": "Ground-Truth Subgraphs for Better Training and Evaluation of Knowledge Graph Augmented LLMs",
+      "authors": [
+        "Alberto Cattaneo",
+        "Carlo Luschi",
+        "Daniel Justus"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2511.04473v2",
+      "linkPdf": "https://arxiv.org/pdf/2511.04473v2",
+      "doi": "",
+      "published": "2025-11-06T15:45:18Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/2502.19583v1",
+      "title": "Rootfinding and Optimization Techniques for Solving Nonlinear Systems of Equations Arising from Cohesive Zone Models",
+      "authors": [
+        "Alberto Cattaneo",
+        "Varun Shankar",
+        "M. Keith Ballard"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2502.19583v1",
+      "linkPdf": "https://arxiv.org/pdf/2502.19583v1",
+      "doi": "",
+      "published": "2025-02-26T21:55:19Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/2005.05187v3",
+      "title": "On birational transformations of Hilbert schemes of points on K3 surfaces",
+      "authors": [
+        "Pietro Beri",
+        "Alberto Cattaneo"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2005.05187v3",
+      "linkPdf": "https://arxiv.org/pdf/2005.05187v3",
+      "doi": "",
+      "published": "2020-05-11T15:22:33Z",
+      "isPublished": true,
+      "venue": "June 2022 Mathematische Zeitschrift 301(1):1-18"
+    },
+    {
+      "id": "http://arxiv.org/abs/1912.07119v3",
+      "title": "Prime order isometries of unimodular lattices and automorphisms of ihs manifolds",
+      "authors": [
+        "Simon Brandhorst",
+        "Alberto Cattaneo"
+      ],
+      "linkAbs": "https://arxiv.org/abs/1912.07119v3",
+      "linkPdf": "https://arxiv.org/pdf/1912.07119v3",
+      "doi": "",
+      "published": "2019-12-15T21:59:48Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/1902.05397v1",
+      "title": "Non-symplectic involutions on manifolds of $K3^{[n]}$-type",
+      "authors": [
+        "Chiara Camere",
+        "Alberto Cattaneo",
+        "Andrea Cattaneo"
+      ],
+      "linkAbs": "https://arxiv.org/abs/1902.05397v1",
+      "linkPdf": "https://arxiv.org/pdf/1902.05397v1",
+      "doi": "",
+      "published": "2019-02-14T14:52:41Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/1812.11554v2",
+      "title": "On the Chow ring of certain Lehn-Lehn-Sorger-van Straten eightfolds",
+      "authors": [
+        "Chiara Camere",
+        "Alberto Cattaneo",
+        "Robert Laterveer"
+      ],
+      "linkAbs": "https://arxiv.org/abs/1812.11554v2",
+      "linkPdf": "https://arxiv.org/pdf/1812.11554v2",
+      "doi": "",
+      "published": "2018-12-30T15:21:25Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/1802.00192v1",
+      "title": "Non-symplectic automorphisms of odd prime order on manifolds of $K3^{[n]}$-type",
+      "authors": [
+        "Chiara Camere",
+        "Alberto Cattaneo"
+      ],
+      "linkAbs": "https://arxiv.org/abs/1802.00192v1",
+      "linkPdf": "https://arxiv.org/pdf/1802.00192v1",
+      "doi": "",
+      "published": "2018-02-01T08:33:53Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/1801.05682v2",
+      "title": "Automorphisms of Hilbert schemes of points on a generic projective K3 surface",
+      "authors": [
+        "Alberto Cattaneo"
+      ],
+      "linkAbs": "https://arxiv.org/abs/1801.05682v2",
+      "linkPdf": "https://arxiv.org/pdf/1801.05682v2",
+      "doi": "",
+      "published": "2018-01-17T14:38:06Z",
+      "isPublished": false,
+      "venue": ""
+    }
+  ]
 }
