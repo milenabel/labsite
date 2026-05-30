@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-29T08:57:23.956Z",
+  "generatedAt": "2026-05-30T08:02:40.423Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -11,65 +11,18 @@
   ],
   "items": [
     {
-      "id": "http://arxiv.org/abs/2602.15472v4",
-      "title": "Fluids You Can Trust: Property-Preserving Operator Learning for Incompressible Flows",
+      "id": "http://arxiv.org/abs/2507.12629v3",
+      "title": "A Unified Framework for Efficient Kernel and Polynomial Interpolation",
       "authors": [
-        "Ramansh Sharma",
-        "Matthew Lowery",
-        "Houman Owhadi",
-        "Varun Shankar"
+        "M. Belianovich",
+        "G. E. Fasshauer",
+        "A. Narayan",
+        "V. Shankar"
       ],
-      "linkAbs": "https://arxiv.org/abs/2602.15472v4",
-      "linkPdf": "https://arxiv.org/pdf/2602.15472v4",
+      "linkAbs": "https://arxiv.org/abs/2507.12629v3",
+      "linkPdf": "https://arxiv.org/pdf/2507.12629v3",
       "doi": "",
-      "published": "2026-02-17T10:20:46Z",
-      "isPublished": false,
-      "venue": ""
-    },
-    {
-      "id": "http://arxiv.org/abs/2405.11907v5",
-      "title": "Ensemble and Mixture-of-Experts DeepONets For Operator Learning",
-      "authors": [
-        "Ramansh Sharma",
-        "Varun Shankar"
-      ],
-      "linkAbs": "https://arxiv.org/abs/2405.11907v5",
-      "linkPdf": "https://arxiv.org/pdf/2405.11907v5",
-      "doi": "",
-      "published": "2024-05-20T09:42:44Z",
-      "isPublished": false,
-      "venue": ""
-    },
-    {
-      "id": "http://arxiv.org/abs/2205.09332v6",
-      "title": "Accelerated Training of Physics-Informed Neural Networks (PINNs) using Meshless Discretizations",
-      "authors": [
-        "Ramansh Sharma",
-        "Varun Shankar"
-      ],
-      "linkAbs": "https://arxiv.org/abs/2205.09332v6",
-      "linkPdf": "https://arxiv.org/pdf/2205.09332v6",
-      "doi": "",
-      "published": "2022-05-19T06:07:01Z",
-      "isPublished": false,
-      "venue": ""
-    },
-    {
-      "id": "http://arxiv.org/abs/2201.07105v1",
-      "title": "Beyond modeling: NLP Pipeline for efficient environmental policy analysis",
-      "authors": [
-        "Jordi Planas",
-        "Daniel Firebanks-Quevedo",
-        "Galina Naydenova",
-        "Ramansh Sharma",
-        "Cristina Taylor",
-        "Kathleen Buckingham",
-        "Rong Fang"
-      ],
-      "linkAbs": "https://arxiv.org/abs/2201.07105v1",
-      "linkPdf": "https://arxiv.org/pdf/2201.07105v1",
-      "doi": "",
-      "published": "2022-01-08T05:33:04Z",
+      "published": "2025-07-16T20:53:30Z",
       "isPublished": false,
       "venue": ""
     }
