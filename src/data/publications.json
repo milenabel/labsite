@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T05:50:54.008Z",
+  "generatedAt": "2026-08-21T05:51:36.517Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -10,6 +10,21 @@
     "Andrey Pluzhnik"
   ],
   "items": [
+    {
+      "id": "http://arxiv.org/abs/2608.19384v1",
+      "title": "A high-order, meshless, Lagrangian--Eulerian RBF-FD method for advection--diffusion--reaction on moving manifolds",
+      "authors": [
+        "Matthew Lowery",
+        "Grady B. Wright",
+        "Varun Shankar"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2608.19384v1",
+      "linkPdf": "https://arxiv.org/pdf/2608.19384v1",
+      "doi": "",
+      "published": "2026-08-19T18:59:26Z",
+      "isPublished": false,
+      "venue": ""
+    },
     {
       "id": "http://arxiv.org/abs/2605.19104v1",
       "title": "Neural Operators for Design-Space Surrogate Modeling of Tendon-Actuated Continuum Robots",
