@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T10:13:06.131Z",
+  "generatedAt": "2026-09-02T09:42:59.752Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -11,7 +11,7 @@
   ],
   "items": [
     {
-      "id": "http://arxiv.org/abs/2608.25084v1",
+      "id": "http://arxiv.org/abs/2608.25084v2",
       "title": "The Frame Kernel Method for Multiscale Operator Learning",
       "authors": [
         "Branden Frieden",
@@ -20,8 +20,8 @@
         "Robert M. Kirby",
         "Varun Shankar"
       ],
-      "linkAbs": "https://arxiv.org/abs/2608.25084v1",
-      "linkPdf": "https://arxiv.org/pdf/2608.25084v1",
+      "linkAbs": "https://arxiv.org/abs/2608.25084v2",
+      "linkPdf": "https://arxiv.org/pdf/2608.25084v2",
       "doi": "",
       "published": "2026-08-25T19:26:46Z",
       "isPublished": false,
