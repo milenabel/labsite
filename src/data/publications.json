@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T10:49:56.900Z",
+  "generatedAt": "2026-09-22T10:05:16.934Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -509,19 +509,19 @@
       "venue": "Physical Review C 113, 054907 (2026)"
     },
     {
-      "id": "http://arxiv.org/abs/2511.04473v2",
+      "id": "http://arxiv.org/abs/2511.04473v3",
       "title": "Ground-Truth Subgraphs for Better Training and Evaluation of Knowledge Graph Augmented LLMs",
       "authors": [
         "Alberto Cattaneo",
         "Carlo Luschi",
         "Daniel Justus"
       ],
-      "linkAbs": "https://arxiv.org/abs/2511.04473v2",
-      "linkPdf": "https://arxiv.org/pdf/2511.04473v2",
+      "linkAbs": "https://arxiv.org/abs/2511.04473v3",
+      "linkPdf": "https://arxiv.org/pdf/2511.04473v3",
       "doi": "",
       "published": "2025-11-06T15:45:18Z",
-      "isPublished": false,
-      "venue": ""
+      "isPublished": true,
+      "venue": "Transactions on Machine Learning Research (TMLR), 09/2026"
     },
     {
       "id": "http://arxiv.org/abs/2510.22068v2",
