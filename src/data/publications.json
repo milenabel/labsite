@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T11:11:24.064Z",
+  "generatedAt": "2026-10-05T12:23:58.826Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -10,6 +10,22 @@
     "Andrey Pluzhnik"
   ],
   "items": [
+    {
+      "id": "http://arxiv.org/abs/2610.02776v1",
+      "title": "Property-Preserving Data Compression for Incompressible Flows",
+      "authors": [
+        "Andrey Pluzhnik",
+        "Ramansh Sharma",
+        "Martin Burtscher",
+        "Varun Shankar"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2610.02776v1",
+      "linkPdf": "https://arxiv.org/pdf/2610.02776v1",
+      "doi": "",
+      "published": "2026-10-02T04:04:49Z",
+      "isPublished": false,
+      "venue": ""
+    },
     {
       "id": "http://arxiv.org/abs/2608.25084v2",
       "title": "The Frame Kernel Method for Multiscale Operator Learning",
