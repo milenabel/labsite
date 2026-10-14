@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T12:48:34.821Z",
+  "generatedAt": "2026-10-14T10:20:52.904Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -11,7 +11,7 @@
   ],
   "items": [
     {
-      "id": "http://arxiv.org/abs/2610.04708v1",
+      "id": "http://arxiv.org/abs/2610.04708v2",
       "title": "Localized Operator Learning with Adaptive Partition-of-Unity Mixture-of-Expert Networks",
       "authors": [
         "Madison Cooley",
@@ -20,8 +20,8 @@
         "Robert M. Kirby",
         "Varun Shankar"
       ],
-      "linkAbs": "https://arxiv.org/abs/2610.04708v1",
-      "linkPdf": "https://arxiv.org/pdf/2610.04708v1",
+      "linkAbs": "https://arxiv.org/abs/2610.04708v2",
+      "linkPdf": "https://arxiv.org/pdf/2610.04708v2",
       "doi": "",
       "published": "2026-10-03T18:48:14Z",
       "isPublished": false,
