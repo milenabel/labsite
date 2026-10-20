@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T10:55:59.911Z",
+  "generatedAt": "2026-10-20T10:11:44.971Z",
   "advisor": "Varun Shankar",
   "students": [
     "Milena Belianovich",
@@ -10,6 +10,38 @@
     "Andrey Pluzhnik"
   ],
   "items": [
+    {
+      "id": "http://arxiv.org/abs/2610.26605v1",
+      "title": "A Probabilistic, Rotation-Preserving Kernel Operator Surrogate for Continuum-Robot Design Spaces",
+      "authors": [
+        "Branden Frieden",
+        "Alan Kuntz",
+        "Varun Shankar"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2610.26605v1",
+      "linkPdf": "https://arxiv.org/pdf/2610.26605v1",
+      "doi": "",
+      "published": "2026-10-19T15:45:57Z",
+      "isPublished": false,
+      "venue": ""
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.25484v1",
+      "title": "KernelPack-JAX: a meshless differentiable GPU framework for node generation and forward and inverse PDE problems",
+      "authors": [
+        "Alberto Cattaneo",
+        "M. Keith Ballard",
+        "Robert M. Kirby",
+        "Grady B. Wright",
+        "Varun Shankar"
+      ],
+      "linkAbs": "https://arxiv.org/abs/2610.25484v1",
+      "linkPdf": "https://arxiv.org/pdf/2610.25484v1",
+      "doi": "",
+      "published": "2026-10-18T19:15:08Z",
+      "isPublished": false,
+      "venue": ""
+    },
     {
       "id": "http://arxiv.org/abs/2610.04708v2",
       "title": "Localized Operator Learning with Adaptive Partition-of-Unity Mixture-of-Expert Networks",
